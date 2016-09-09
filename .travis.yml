@@ -5,9 +5,10 @@ jdk:
   - openjdk8
 before_script:
   - echo "before_script start"
+  - git --version
+  - mvn -version
   - ls
   - pwd
-  - mvn compile
   - echo "before_script end"
 script:
   - echo "script start"
@@ -15,3 +16,12 @@ script:
   - pwd
   - mvn compile
   - echo "script end"
+after_script:
+  - echo "after_script start"
+  - ls
+  - pwd
+  - echo "after_script end"
+after_success:
+  - echo "after_success"
+after_failure:
+  - echo "after_failure"
