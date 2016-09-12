@@ -18,8 +18,8 @@ script:
   - ls
   - pwd
   - mvn compile
-  - echo "secure=$secure
-  - echo "SOMEVAR=$SOMEVAR
+  - echo "secure=$secure"
+  - echo "SOMEVAR=$SOMEVAR"
   - echo "script end"
 after_script:
   - echo "after_script start"
