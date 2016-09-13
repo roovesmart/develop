@@ -2,7 +2,6 @@ language: java
 jdk:
   - openjdk6
   - openjdk7
-  - openjdk8
 before_script:
   - echo "before_script start"
   - git --version
@@ -12,14 +11,12 @@ before_script:
   - echo "before_script end"
 env:
   global:
-    secure: "PatNGIInARQR/dW1Ud2BgxOY+0bqhfB4Pl8BJNj8DBDCmENqhqVa/+irBmK4BQVD2BDW12daP8rBCVoCHLcA1PlsIuzu+/HXP3Nw6Zp1LxXBrU5hfxjOLM7y6soL2A3myx9dXxWu/K26shTkcwIUJKWp91NFqKLL831qRuisV56WOMmXuV9YPf+DKKYZ3OUtaTWkEu1H5/3WzBu7orVcvt23EQNWdIRg1KNuKieOiJVvkqrXmiwijPxHIifOebU7egkI61eEpGF5y8/Bvkn/fWBmrhS9Wh9wvaN+vkRRdrnSx7OT+TAJ4qUf1j5VamJFdwNCifXW9zhee7c3R5D5OfO6YajqsxCARta0x82+bBtsGvQidllPsEmxMEQwn5fAZP2kI7cp+ZNCwV/m/E3hoTlAWAZ0QOBqTTfP+Ox17ny+PD1UBN2TLKblBOmrONfMBUgUDjcOkpfnclThyH69kzzitEXaKYIiWC2pAo4mmDGdIV57jjoqiHGO50h1q6cw7wNli3zeqBifU5VvsN+k3r7tNf/2gd9sLv8PwSetFQxnfgc5Po/11qPM8V2LvJZtHSJzaa+AdjF6/aMefh7Mb5EIwaaIb3z9AXUvGGXYCMSq7Pu2+dXehoZKIJyalKZ9D6LOGX+KAhlcqVW+C82TrHH1RNd6/KThds8DVRKion8="
+    secure: "XiVeH/aVn7ZThhWOP5Akv2dEyFnV7iAFBL+KcM+9RuH+H+sddh0Qu0AtcUqn625KhOeCv/qgIFa237dxrFkSMwEX9Bkwb6rLYNDUMbFW+c1Iv1J2+89AKBaccml59TxfUYltVzzeLSEnqgb6TPmjlKk+zccTQr36VDe8BX3SAb08UEcWtXri6REjjopONjezdKRo9BQgL7xK7MABgiK4QZFEUH54bVCgqNGv+ftkhHRstMYXnpblG5vFPC1piFPsqEtECPhTOF5sMFagC15lzGjvRlKulENsfoF3ZOvF3/u6qE6KpCYx8JTKLmF+ZvcOsx6k3mGuIOCaqStd3k45cwefppAk1dYGSwSk+PpMsUVKISwaJVP3cvt76/ScS6w0la2KsI+/2rfIo9QGxAcl3jmwRUgRGC3o025iYWxmZFuRdyUFlzMTVhR8doriGPK21zr7bgboR2GOUfib/ILpUhaGHUNF/rltfpS2xJEoPytBmweXEF4cI2dDm+g9E4p0N7EBvkSImETkACqO3vcUM1j4M3VAvNcyZccmsmmGTgZuGTZWIuIQJYdYZgPO/E16B0OnQVMIeW5PGy4nQc6rITvrwYLQR+s2T6PMbrUn6xxsr7Yu5OEHj/l1iwIS78rTVRbRpNfLPsm6otnDk9OtC4uAJC7NNcbO7EMQ+qgbZyg="
 script:
   - echo "script start"
   - ls
   - pwd
-  - mvn compile
-  - echo "secure=$secure"
-  - echo "SOMEVAR=$SOMEVAR"
+  - mvn deploy -Dpassword=$pass
   - echo "script end"
 after_script:
   - echo "after_script start"
