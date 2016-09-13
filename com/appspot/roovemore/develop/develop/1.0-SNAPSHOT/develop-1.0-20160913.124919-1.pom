@@ -34,6 +34,7 @@
 	        <userName>roovesmart</userName>
 	        <password>${pass}</password>
 
+
 	        <!-- git push時のコミットコメント -->
 	        <message>Maven artifacts for ${project.version}</message>
 	        <noJekyll>true</noJekyll>
