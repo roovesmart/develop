@@ -32,7 +32,7 @@
 	        -->
 
 	        <userName>roovesmart</userName>
-	        <password>${pass}</password>
+	        <password>${password}</password>
 
 
 	        <!-- git push時のコミットコメント -->
