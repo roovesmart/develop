@@ -32,7 +32,7 @@
 	        -->
 
 	        <userName>roovesmart</userName>
-	        <password>${passhoge}</password>
+	        <password>${pass}</password>
 
 	        <!-- git push時のコミットコメント -->
 	        <message>Maven artifacts for ${project.version}</message>
