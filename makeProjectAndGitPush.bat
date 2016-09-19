@@ -1,22 +1,29 @@
 @echo off
-echo [INFO] ------------------------------------------------------------------------
-echo [INFO] set up mvn archetype 
-echo [INFO] ------------------------------------------------------------------------
-echo [INFO] cd current dir 
+echo [INFO] cd current dir
 cd /d %~dp0
-rem set groupId=com.appspot.roovemore.xxxx
-set /p groupId="input groupId (ex:com.appspot.roovemore.xxxx) : "
+set /p cdflg="cd parent dir? (y/n) : "
+if "%cdflg%"=="y" (
+echo [INFO] cd parent dir
+cd ../
+) else if "%cdflg%"=="n" (
+  echo "no"
+)else (
+  echo "other key"
+  exit /b 1
+)
+echo [INFO] ------------------------------------------------------------------------
+echo [INFO] set up mvn archetype
+echo [INFO] ------------------------------------------------------------------------
+set /p groupId="input groupId (ex:com.xxxxx.xxxxx.xxxx) : "
 echo [INFO] %groupId%
-rem set artifactId=roovemore-xxxx
-set /p artifactId="input artifactId (ex:roovemore-xxxx) : "
+set /p artifactId="input artifactId (ex:xxxxxxxxxx-xxxx) : "
 echo [INFO] %artifactId%
-rem set gitRemoteUrl=roovemore-xxxx
 set /p gitRemoteUrl="input gitRemoteUrl (ex:https://xxxx.git) : "
 echo [INFO] %gitRemoteUrl%
 set /p answer="run mvn archetype:generate? (y/n) : "
 if "%answer%"=="y" (
 echo yes
-) else if "%answer%"=="n" ( 
+) else if "%answer%"=="n" (
   echo "no"
   exit /b 1
 )else (
@@ -24,7 +31,7 @@ echo yes
   exit /b 1
 )
 echo [INFO] ------------------------------------------------------------------------
-echo [INFO] run mvn archetype:generate 
+echo [INFO] run mvn archetype:generate
 echo [INFO] ------------------------------------------------------------------------
 call mvn archetype:generate -DinteractiveMode=false ^
 -DarchetypeGroupId=org.apache.maven.archetypes ^
@@ -38,14 +45,14 @@ call mvn archetype:generate -DinteractiveMode=false ^
 echo [INFO] cd project dir
 cd %artifactId%
 echo [INFO] ------------------------------------------------------------------------
-echo [INFO] run mvn eclipse 
+echo [INFO] run mvn eclipse
 echo [INFO] ------------------------------------------------------------------------
 call mvn eclipse:eclipse -DdownloadSources=true
 echo [INFO] ------------------------------------------------------------------------
-echo [INFO] git set up 
+echo [INFO] git set up
 echo [INFO] ------------------------------------------------------------------------
 echo [INFO] ------------------------------------------------------------------------
-echo [INFO] git init 
+echo [INFO] git init
 echo [INFO] ------------------------------------------------------------------------
 git init
 echo [INFO] ------------------------------------------------------------------------
