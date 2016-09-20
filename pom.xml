@@ -20,6 +20,16 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+	<repositories>
+		<repository>
+			<id>github-maven</id>
+			<url>https://github.com/roovesmart/roovemore-common/tree/mvn-repo</url>
+		</repository>
+	</repositories>
+
+
+
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
