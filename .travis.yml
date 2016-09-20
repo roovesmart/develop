@@ -11,12 +11,12 @@ before_script:
   - echo "before_script end"
 env:
   global:
-    secure: "XiVeH/aVn7ZThhWOP5Akv2dEyFnV7iAFBL+KcM+9RuH+H+sddh0Qu0AtcUqn625KhOeCv/qgIFa237dxrFkSMwEX9Bkwb6rLYNDUMbFW+c1Iv1J2+89AKBaccml59TxfUYltVzzeLSEnqgb6TPmjlKk+zccTQr36VDe8BX3SAb08UEcWtXri6REjjopONjezdKRo9BQgL7xK7MABgiK4QZFEUH54bVCgqNGv+ftkhHRstMYXnpblG5vFPC1piFPsqEtECPhTOF5sMFagC15lzGjvRlKulENsfoF3ZOvF3/u6qE6KpCYx8JTKLmF+ZvcOsx6k3mGuIOCaqStd3k45cwefppAk1dYGSwSk+PpMsUVKISwaJVP3cvt76/ScS6w0la2KsI+/2rfIo9QGxAcl3jmwRUgRGC3o025iYWxmZFuRdyUFlzMTVhR8doriGPK21zr7bgboR2GOUfib/ILpUhaGHUNF/rltfpS2xJEoPytBmweXEF4cI2dDm+g9E4p0N7EBvkSImETkACqO3vcUM1j4M3VAvNcyZccmsmmGTgZuGTZWIuIQJYdYZgPO/E16B0OnQVMIeW5PGy4nQc6rITvrwYLQR+s2T6PMbrUn6xxsr7Yu5OEHj/l1iwIS78rTVRbRpNfLPsm6otnDk9OtC4uAJC7NNcbO7EMQ+qgbZyg="
+    secure: "byBxNFiE3nGQm8JtmrmyC1MQ8mQztK1FYy0cFk26fUbeX47Ore5C8oo8r1prGLPc3PtZuM0fmOtOeg+GVyVOb7veMwsdOdObwxwybzmWCcNJ/bLxFj6KCaYmXOONTMjpldKZCDhgeS9Ffq+vzenUoglm2wLVZ+n8CrCn3n2v5fj8tMWHcPTrC7L5JIP+scyepTFNg91gFvUeVXKuxvtFiPht+uX2thta7B7ZdUnGl0QmGfsLM4paWo1xJ/gwsI5OZ+lugr1lZzENo4ITrwBzyB7TtQxBDH/i9O0hZrELzZoWa31XdXjzSbEkT4fVGibfpkI2CS5W1Cnfch98kkmH2X+IyQtseCpOrAIdcF8NzwnKa4UACH0xIWLn9CVvtyuK1HkZklW1SdxM7PeTgjjbS1jiCM+37PnDr5ZW6vFSNKelvk4Xo7DpomrJCc7I9OuF8FOIItORRRZI4fGXqu4bMjybhWFUMervZW6qrn1ZGRm6gpPcwDPZ7dkL4Qi+TO02a9QKcxrMDM3sngJwTxfY6/dJBtlpZpppnJxp+xHu6rn+3hFeECfvniIDgK1JvpE9+lRL49yZ7Csuj+ag5J9b0gfGvcXjP4qheTf2PsLuC9MqsZvRHs97zSFnGIaun2UhrPYwSUElVyCmCDY7apYpOy/EzX6xG+3FVqN2P55jQa8="
 script:
   - echo "script start"
   - ls
   - pwd
-  - mvn deploy -Dpassword=$pass
+  - mvn deploy -Dpassword=$pass -DuserName=$user
   - echo "script end"
 after_script:
   - echo "after_script start"
