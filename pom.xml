@@ -13,6 +13,8 @@
 	<parent>
 		<groupId>com.appspot.roovemore.common</groupId>
 		<artifactId>roovemore-common</artifactId>
+		<version>1.0-20160920.131223-1</version>
+
 <!--
 		TODO parentの成果物がroovemore-common-1.0-20160920.131223-1.pomみたいな感じで
 		生成されてしまうため、バージョン指定するとうまくいかない…
