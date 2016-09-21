@@ -16,7 +16,7 @@ script:
   - echo "script start"
   - ls
   - pwd
-  - mvn deploy -Dpassword=$pass -DuserName=$user
+  - mvn deploy -Dpassword=$pass -DuserName=$user -X
   - echo "script end"
 after_script:
   - echo "after_script start"
