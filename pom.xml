@@ -14,6 +14,7 @@
 		<groupId>com.appspot.roovemore.common</groupId>
 		<artifactId>roovemore-common</artifactId>
 		<version>1.0-SNAPSHOT</version>
+		<relativePath>../roovemore-common/pom.xml</relativePath>
 
 <!--
 		TODO parentの成果物がroovemore-common-1.0-20160920.131223-1.pomみたいな感じで
@@ -31,7 +32,7 @@
 	<repositories>
 		<repository>
 			<id>github-maven</id>
-			<url>https://github.com/roovesmart/roovemore-common</url>
+			<url>https://github.com/roovesmart/roovemore-common/tree/mvn-repo</url>
 		</repository>
 	</repositories>
 
