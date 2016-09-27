@@ -10,6 +10,7 @@
 	<name>develop</name>
 	<url>http://maven.apache.org</url>
 
+	<!--
 
 	<parent>
 		<groupId>com.appspot.roovemore.common</groupId>
@@ -19,6 +20,7 @@
 
 
 	</parent>
+		 -->
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
