@@ -16,7 +16,10 @@ script:
   - echo "script start"
   - ls
   - pwd
-  - mvn clean deploy -Dpassword=$pass -DuserName=$user -X -e
+  - echo "### RUN mvn clean"
+  - mvn clean -X -e
+  - echo "### RUN mvn deploy"
+  - mvn deploy -Dpassword=$pass -DuserName=$user -X -e
   - echo "script end"
 after_script:
   - echo "after_script start"
