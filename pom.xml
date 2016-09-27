@@ -32,7 +32,7 @@
 	<repositories>
 		<repository>
 			<id>github-maven</id>
-			<url>https://github.com/roovesmart/roovemore-common/tree/mvn-repo</url>
+			<url>https://github.com/roovesmart/roovemore-common/blob/mvn-repo</url>
 		</repository>
 	</repositories>
 
