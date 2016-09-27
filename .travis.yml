@@ -16,8 +16,6 @@ script:
   - echo "script start"
   - ls
   - pwd
-  - ls -ltr /home/travis/.m2/
-  - rm -rf /home/travis/.m2/
   - echo "### RUN mvn clean"
   - mvn clean -X -e
   - echo "### RUN mvn deploy"
