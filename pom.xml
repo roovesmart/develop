@@ -9,15 +9,17 @@
 
 	<name>develop</name>
 	<url>http://maven.apache.org</url>
-<!--
 
 	<parent>
 		<groupId>com.appspot.roovemore.common</groupId>
 		<artifactId>roovemore-common</artifactId>
 		<version>1.0</version>
 		<relativePath>../roovemore-common</relativePath>
-	</parent>
+
+<!--
 		 -->
+
+	</parent>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
