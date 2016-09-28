@@ -4,11 +4,12 @@ jdk:
   - openjdk7
 before_script:
   - echo "before_script start"
-  - git --version
-  - mvn -version
-  - ls
-  - pwd
+  - ls -ltr /home/travis/.m2/
+  - ls -ltr /home/travis/.m2/repository/
+  - ls -ltr /home/travis/.m2/repository/com/appspot/roovemore/
+  - mvn install -X -e
   - echo "before_script end"
+install: true
 env:
   global:
     secure: "byBxNFiE3nGQm8JtmrmyC1MQ8mQztK1FYy0cFk26fUbeX47Ore5C8oo8r1prGLPc3PtZuM0fmOtOeg+GVyVOb7veMwsdOdObwxwybzmWCcNJ/bLxFj6KCaYmXOONTMjpldKZCDhgeS9Ffq+vzenUoglm2wLVZ+n8CrCn3n2v5fj8tMWHcPTrC7L5JIP+scyepTFNg91gFvUeVXKuxvtFiPht+uX2thta7B7ZdUnGl0QmGfsLM4paWo1xJ/gwsI5OZ+lugr1lZzENo4ITrwBzyB7TtQxBDH/i9O0hZrELzZoWa31XdXjzSbEkT4fVGibfpkI2CS5W1Cnfch98kkmH2X+IyQtseCpOrAIdcF8NzwnKa4UACH0xIWLn9CVvtyuK1HkZklW1SdxM7PeTgjjbS1jiCM+37PnDr5ZW6vFSNKelvk4Xo7DpomrJCc7I9OuF8FOIItORRRZI4fGXqu4bMjybhWFUMervZW6qrn1ZGRm6gpPcwDPZ7dkL4Qi+TO02a9QKcxrMDM3sngJwTxfY6/dJBtlpZpppnJxp+xHu6rn+3hFeECfvniIDgK1JvpE9+lRL49yZ7Csuj+ag5J9b0gfGvcXjP4qheTf2PsLuC9MqsZvRHs97zSFnGIaun2UhrPYwSUElVyCmCDY7apYpOy/EzX6xG+3FVqN2P55jQa8="
@@ -16,11 +17,6 @@ script:
   - echo "script start"
   - ls
   - pwd
-  - ls -ltr /home/travis/.m2/
-  - ls -ltr /home/travis/.m2/repository/
-  - ls -ltr /home/travis/.m2/repository/com/appspot/roovemore/common/roovemore-common/
-  - ls -ltr /home/travis/.m2/repository/com/appspot/roovemore/common/roovemore-common/1.0/
-  - view /home/travis/.m2/settings.xml
   - echo "### RUN mvn clean"
   - mvn clean -X -e
   - echo "### RUN mvn deploy"
