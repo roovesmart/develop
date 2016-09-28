@@ -53,6 +53,7 @@
 			<groupId>com.appspot.roovemore.common</groupId>
 			<artifactId>roovemore-common</artifactId>
 			<version>1.0</version>
+			<type>pom</type>
 		</dependency>
 
 	</dependencies>
