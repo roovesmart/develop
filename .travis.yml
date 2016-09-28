@@ -16,8 +16,11 @@ script:
   - echo "script start"
   - ls
   - pwd
+  - ls -ltr /home/travis/.m2/
+  - ls -ltr /home/travis/.m2/repository/
+  - ls -ltr /home/travis/.m2/repository/com/appspot/roovemore/common/roovemore-common/
   - ls -ltr /home/travis/.m2/repository/com/appspot/roovemore/common/roovemore-common/1.0/
-  - view /home/travis/.m2/repository/com/appspot/roovemore/common/roovemore-common/1.0/roovemore-common-1.0.pom
+  - view /home/travis/.m2/settings.xml
   - echo "### RUN mvn clean"
   - mvn clean -X -e
   - echo "### RUN mvn deploy"
