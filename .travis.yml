@@ -6,7 +6,6 @@ before_script:
   - echo "before_script start"
   - ls -ltr /home/travis/.m2/
   - ls -ltr /home/travis/.m2/repository/
-  - ls -ltr /home/travis/.m2/repository/com/appspot/roovemore/
   - mvn install -X -e
   - echo "before_script end"
 install: true
