@@ -4,30 +4,20 @@ jdk:
   - openjdk7
 before_script:
   - echo "before_script start"
-  - ls -ltr /home/travis/.m2/
-  - ls -ltr /home/travis/.m2/repository/
-  - mvn install -X -e
   - echo "before_script end"
 install: true
 env:
   global:
-    secure: "byBxNFiE3nGQm8JtmrmyC1MQ8mQztK1FYy0cFk26fUbeX47Ore5C8oo8r1prGLPc3PtZuM0fmOtOeg+GVyVOb7veMwsdOdObwxwybzmWCcNJ/bLxFj6KCaYmXOONTMjpldKZCDhgeS9Ffq+vzenUoglm2wLVZ+n8CrCn3n2v5fj8tMWHcPTrC7L5JIP+scyepTFNg91gFvUeVXKuxvtFiPht+uX2thta7B7ZdUnGl0QmGfsLM4paWo1xJ/gwsI5OZ+lugr1lZzENo4ITrwBzyB7TtQxBDH/i9O0hZrELzZoWa31XdXjzSbEkT4fVGibfpkI2CS5W1Cnfch98kkmH2X+IyQtseCpOrAIdcF8NzwnKa4UACH0xIWLn9CVvtyuK1HkZklW1SdxM7PeTgjjbS1jiCM+37PnDr5ZW6vFSNKelvk4Xo7DpomrJCc7I9OuF8FOIItORRRZI4fGXqu4bMjybhWFUMervZW6qrn1ZGRm6gpPcwDPZ7dkL4Qi+TO02a9QKcxrMDM3sngJwTxfY6/dJBtlpZpppnJxp+xHu6rn+3hFeECfvniIDgK1JvpE9+lRL49yZ7Csuj+ag5J9b0gfGvcXjP4qheTf2PsLuC9MqsZvRHs97zSFnGIaun2UhrPYwSUElVyCmCDY7apYpOy/EzX6xG+3FVqN2P55jQa8="
+    secure: "TO1iPq3Z9WhKCxjVVAZnVj/jsCIzgcIYblEeKk7N/koEKYJ2thkpeZlTlLiEbTFJU1ySYEmeq4EUp8NyV+dflNCdUVAlqRsLeZzW8m4IDFYCrVWV9PZJXwnaY9oh0W80TesE2aRwqmnClftcNc2f3b151cPDek9r9lGf8IhHVqhEfvZosOKm5Z6lxSHOwE/CP1YxSV2h9z4a/r6PLDi2wxTgI76GL7x4Dw54UEgC4vuyW0fgWuKkqN/Aaom8YPHbfcGUwDtOdZWPWdagG3Uvvkj6lMTl/Fm2seSl8L5413ZuTCk7alfYGBl9r5MwGnVq7hhYy/agSKj5/xYvnAM3lgju00FeSHIdFf2+0vcdA0OxuynXj3ZQRyR1U/0Cy+rmtr8g+fz3cIfIq3Kv153MFzbJBfMPj+IZT65aEiNOZVyFW9vORxWP29WU0/MiMLnpU8s5XNNNUixRsKFASghfYD+4VhSHVIuu3AXTlOm/4VBykz/oCCYoSYeTIQc39DXZY6S9oCqT1DCb+Rr19dJrQjjbl7VHtfNvAO7bEwoCOb9r80nC08ywqTgk67zz/5YbiSjawMHR/oz5TOJkkjXgJJnunsjBJZE4IvBLUPOBQOoi9hc3M2oCqydhYACmAnE7cXm0qJqeDL7ba5BlIpyWx6A1YBRe8x+ySfns0OTwtvE="
 script:
   - echo "script start"
-  - ls
-  - pwd
-  - echo "### RUN mvn clean"
-  - mvn clean -X -e
   - echo "### RUN mvn deploy"
-  - mvn deploy -Dpassword=$pass -DuserName=$user -X -e
+  - mvn deploy -X -e
   - echo "script end"
 after_script:
   - echo "after_script start"
-  - ls
-  - pwd
   - echo "after_script end"
 after_success:
   - echo "after_success"
 after_failure:
   - echo "after_failure"
-

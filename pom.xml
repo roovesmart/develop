@@ -24,14 +24,15 @@
 	<repositories>
 		<repository>
 			<id>github-maven</id>
+			<!-- https://raw.github.com/(Gitユーザ名)/(Gitリポジトリ名)/(Mavenリポジトリ用ブランチ名)/ -->
 			<url>https://raw.github.com/roovesmart/roovemore-common/mvn-repo</url>
 
-			<!-- コレが無いとSNAPSHOTバージョンでも一回取得すると更新確認しに行ってくれないので、いつまで経っても反映されない。updatePolicyは更新確認する間隔。
+			<!-- SNAPSHOTバージョンでも一回取得すると更新確認しに行ってくれないので、いつまで経っても反映されない。updatePolicyは更新確認する間隔。
 			<snapshots>
 				<enabled>true</enabled>
 				<updatePolicy>always</updatePolicy>
 			</snapshots>
--->
+			-->
 		</repository>
 	</repositories>
 
